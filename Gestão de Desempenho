@@ -1,0 +1,75 @@
+programa {
+  funcao inicio() {
+    inteiro nota
+    inteiro colaborador
+
+    escreva("Seja bem vindo à plataforma de Gestão de Desempenho \n")
+    escreva("Para começar selecione o colaborador: \n")
+    escreva("1 - Lucas Ernesto \n")
+    escreva("2 - Roberto Cristo \n")
+    escreva("3 - Stephanie Janoski \n")
+    leia(colaborador)
+
+    escolha(colaborador){
+
+      caso 1:
+      cadeia colaborador = "Lucas Ernesto"
+      escreva("Ok, vamos atribuir notas ao comportamento de ", colaborador,". \n")
+      pare
+
+      caso 2:
+      cadeia colaborador = "Roberto Cristo"
+      escreva("Ok, vamos atribuir notas ao comportamento de ", colaborador,". \n")
+      pare
+
+      caso 3:
+      cadeia colaborador = "Stephanie Janoski"
+      escreva("Ok, vamos atribuir notas ao comportamento de ", colaborador,". \n")
+      pare
+      
+      caso contrario: 
+      escreva("Tente Novamente \n \n")
+      
+    }
+    limpa
+    escreva("Comprometimento de ", colaborador, " Dê uma nota de 0 a 5 \n")
+    inteiro comprometimento 
+    leia(comprometimento)
+
+    escreva("Pontualidade de ", colaborador, " Dê uma nota de 0 a 5 \n")
+    inteiro pontualidade 
+    leia(pontualidade)
+
+    escreva("Criatividade de ", colaborador, " Dê uma nota de 0 a 5 \n")
+    inteiro criatividade 
+    leia(criatividade)
+
+    escreva("Excelente! \nEssas são as notas de ", colaborador,". \n")
+    escreva("Comprometimento: ", comprometimento, "\n")
+    escreva("Pontualidade: ", pontualidade, "\n")
+    escreva("Criatividade: ", criatividade, "\n")
+
+    real media //calculamos aqui a média do candidato
+    media = (comprometimento + pontualidade + criatividade)/3
+    escreva("Média do colaborador ", media, "\n")
+    
+    se(media <= 2){
+      escreva("O desempenho de ", colaborador, " esta baixo, desenvolva um plano de ação. \n")
+    }senao se(media > 2 e media < 4){
+      escreva(colaborador, " está indo bem! Mas ainda podemos melhorar, incentive ", colaborador, " a inovar em seu ambiente de trabalho. \n")
+    }senao se(media >= 4){
+      escreva(colaborador, " está superando expectativas, é um excelente candidato para ganhar aumentos e promoções! \n")
+    }senao{
+      escreva("isso não deu certo, tente outra vez. \n")
+    }
+    escreva("Deseja avaliar outro candidato? 1-sim 2-não \n")
+    inteiro voltar
+    leia(voltar)
+
+    se(voltar == 1){
+      inicio()
+    }senao{
+      escreva("esta bem.")
+    }
+  }
+}
