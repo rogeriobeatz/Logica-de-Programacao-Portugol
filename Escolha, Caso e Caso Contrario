@@ -1,0 +1,25 @@
+programa {
+  funcao inicio() {
+    inteiro data
+    escreva("Digite um dia da semana (1-Seg) (2-Ter) (3-Qua)")
+    leia(data)
+
+    escolha(data){
+
+      caso 1:
+      escreva("Hoje é segunda")
+      pare
+
+      caso 2:
+      escreva("Hoje é terça")
+      pare
+
+      caso 3:
+      escreva("Hoje é quarta")
+      pare
+
+      caso contrario: 
+      escreva("Você digitou um número errado")
+    }
+  }
+}
