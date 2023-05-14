@@ -1,0 +1,50 @@
+programa {
+  funcao inicio() {
+    inteiro contador = 4, n1, n2
+    real calculo
+
+    escreva("digite um número ")
+    leia(n1)
+    escreva("digite outro número ")
+    leia(n2)
+
+    enquanto(contador != 0){
+      
+      escreva("O que você deseja fazer com os números: " + n1 + " e " + n2 + "\n")
+      escreva("1> Soma \n")
+      escreva("2> Subtração \n")
+      escreva("3> Multiplicação \n")
+      escreva("4> Divisão \n")
+      escreva("0 - Para sair \n")
+      leia(contador)
+
+      escolha(contador){
+        caso 1: 
+        calculo = n1 + n2
+        escreva("O resultado da soma é " + calculo + "\n")
+        pare
+
+        caso 2:
+        calculo = n1 - n2
+        escreva("O resultado da subtração é " + calculo + "\n")
+        pare
+
+        caso 3:
+        calculo = n1 * n2
+        escreva("O resultado da multiplicação é " + calculo + "\n")
+        pare
+
+        caso 4:
+        calculo = n1 / n2
+        escreva("O resultado da multiplicação é " + calculo + "\n")
+        pare
+
+        caso contrario:
+        escreva("Valor nao tem nas opções. \n")
+
+      }
+
+      
+    }
+  }
+}
